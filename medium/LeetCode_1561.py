@@ -16,6 +16,7 @@ class Solution:
         for i in range(len(piles) // 3):
             r += a[0+(i*2)+1]
         return r
+
 s = Solution()
 result = s.maxCoins([2,4,1,2,7,8])
 print(result)
