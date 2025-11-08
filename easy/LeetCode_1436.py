@@ -1,8 +1,24 @@
-#TODO You are given the array paths, where paths[i] = [cityAi, cityBi]
-# means there exists a direct path going from cityAi to cityBi.
-# Return the destination city, that is, the city without any path outgoing to another city.
-# It is guaranteed that the graph of paths forms a line without any loop,
-# therefore, there will be exactly one destination city.
+"""
+------------------------------------------------------------
+🧠 Problem: 1436. Destination City
+🔗 Link: https://leetcode.com/problems/destination-city/
+------------------------------------------------------------
+📜 Description:
+You are given a list of paths, where each path = [from, to].
+Return the city that never appears as a starting point.
+
+💡 Example:
+Input:  paths = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]
+Output: "Sao Paulo"
+
+🧩 Approach:
+- Collect all starting cities into a set.
+- The destination city is the one not in that set.
+
+⏱️ Time Complexity:  O(n)
+💾 Space Complexity: O(n)
+------------------------------------------------------------
+"""
 from typing import List
 
 class Solution:

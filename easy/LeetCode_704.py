@@ -1,8 +1,25 @@
-#TODO Given an array of integers nums which is sorted in ascending order,
-# and an integer target, write a function to search target in nums.
-# If target exists, then return its index. Otherwise, return -1.
-# You must write an algorithm with O(log n) runtime complexity.
-from operator import index
+"""
+------------------------------------------------------------
+🧠 Problem: 704. Binary Search
+🔗 Link: https://leetcode.com/problems/binary-search/
+------------------------------------------------------------
+📜 Description:
+Given a sorted array of integers `nums` and an integer `target`,
+return the index of `target` if it exists, otherwise return -1.
+
+💡 Example:
+Input:  nums = [-1,0,3,5,9,12], target = 9
+Output: 4
+
+🧩 Approach:
+Use binary search (divide and conquer):
+- Compare middle element with target.
+- Narrow search range accordingly until found or range is empty.
+
+⏱️ Time Complexity:  O(log n)
+💾 Space Complexity: O(1)
+------------------------------------------------------------
+"""
 from typing import List
 
 class Solution:

@@ -1,6 +1,24 @@
-#TODO Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it.
-# That is, for each nums[i] you have to count the number of valid j's such that j != i and nums[j] < nums[i].
-# Return the answer in an array.
+"""
+------------------------------------------------------------
+🧠 Problem: 1365. How Many Numbers Are Smaller Than the Current Number
+🔗 Link: https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+------------------------------------------------------------
+📜 Description:
+For each number in `nums`, count how many numbers are smaller than it.
+
+💡 Example:
+Input:  nums = [8,1,2,2,3]
+Output: [4,0,1,1,3]
+
+🧩 Approach:
+- Sort a copy of nums.
+- Map each unique number → its first index (count of smaller elements).
+- Replace each number with its mapped value.
+
+⏱️ Time Complexity:  O(n log n)
+💾 Space Complexity: O(n)
+------------------------------------------------------------
+"""
 from typing import List
 
 class Solution:

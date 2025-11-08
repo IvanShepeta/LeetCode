@@ -1,10 +1,26 @@
-#TODO 1678
-# You own a Goal Parser that can interpret a string command.
-# The command consists of an alphabet of "G", "()" and/or "(al)" in some order.
-# The Goal Parser will interpret "G" as the string "G", "()" as the string "o", and "(al)" as the string "al".
-# The interpreted strings are then concatenated in the original order.
-# Given the string command, return the Goal Parser's interpretation of command.
+"""
+------------------------------------------------------------
+🧠 Problem: 1678. Goal Parser Interpretation
+🔗 Link: https://leetcode.com/problems/goal-parser-interpretation/
+------------------------------------------------------------
+📜 Description:
+You are given a string command containing "G", "()", and "(al)".
+Interpret it as:
+- "G" → "G"
+- "()" → "o"
+- "(al)" → "al"
 
+💡 Example:
+Input:  command = "G()(al)"
+Output: "Goal"
+
+🧩 Approach:
+Use string replace operations.
+
+⏱️ Time Complexity:  O(n)
+💾 Space Complexity: O(1)
+------------------------------------------------------------
+"""
 class Solution:
     def interpret(self, command: str) -> str:
         print(command)
