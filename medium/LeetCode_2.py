@@ -38,8 +38,10 @@ class Solution:
         while l1 != None or l2 != None or carry != 0:
             l1Val = l1.val if l1 else 0
             l2Val = l2.val if l2 else 0
+
             columnSum = l1Val + l2Val + carry
             carry = columnSum // 10
+
             newNode = ListNode(columnSum % 10)
             curr.next = newNode
             curr = newNode
@@ -47,6 +49,28 @@ class Solution:
             l2 = l2.next if l2 else None
         return dummyHead.next
 
+# 🔧 Допоміжна функція: створює ListNode зі звичайного списку
+def list_to_listnode(lst):
+    dummy = ListNode(0)
+    curr = dummy
+    for num in lst:
+        curr.next = ListNode(num)
+        curr = curr.next
+    return dummy.next
+
+# 🔧 Допоміжна функція: перетворює ListNode назад у звичайний список
+def listnode_to_list(node):
+    res = []
+    while node:
+        res.append(node.val)
+        node = node.next
+    return res
+
+
+# 🚀 Приклад використання
+l1 = list_to_listnode([2, 4, 3])
+l2 = list_to_listnode([5, 6, 4])
+
 s = Solution()
-result = s.addTwoNumbers(l1 = [2,4,3], l2 = [5,6,4])
-print(result)
+result = s.addTwoNumbers(l1, l2)
+print(listnode_to_list(result))
