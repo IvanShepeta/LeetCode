@@ -37,7 +37,7 @@ class Solution:
                     left = mid + 1
                 else:
                     right = mid - 1
-                    # right sorted portion
+            # right sorted portion
             else:
                 if target < nums[mid] or target > nums[right]:
                     right = mid - 1
