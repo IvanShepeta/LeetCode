@@ -1,4 +1,4 @@
 .idea
 .venv
-#generate_readme.py
-#.github
+generate_readme.py
+.github/
