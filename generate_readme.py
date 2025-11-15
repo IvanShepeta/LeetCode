@@ -84,4 +84,4 @@ readme_path = os.path.join(base_dir, "README.md")
 with open(readme_path, "w", encoding="utf-8") as f:
     f.write(md)
 
-print(f"README.md успішно згенеровано з гарною шапкою та посиланнями на рішення!")
+print(f"README.md successfully generated")
