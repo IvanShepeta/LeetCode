@@ -2,3 +2,4 @@
 .venv
 generate_readme.py
 .github/
+__pycache__
