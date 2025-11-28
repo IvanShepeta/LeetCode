@@ -33,14 +33,14 @@ class ListNode:
         self.val = val
         self.next = next
 
-# Функція для конвертації списку Python -> ListNode
+# Function to convert Python list -> ListNode
 def list_to_linked(lst):
     head = None
     for val in reversed(lst):
         head = ListNode(val, head)
     return head
 
-# Функція для конвертації ListNode -> список Python
+#Function to convert ListNode -> Python list
 def linked_to_list(head: Optional[ListNode]):
     result = []
     curr = head
