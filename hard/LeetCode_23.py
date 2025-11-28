@@ -1,3 +1,28 @@
+"""
+------------------------------------------------------------
+🧠 Problem: 23. Merge k Sorted Lists
+🔗 Link: https://leetcode.com/problems/merge-k-sorted-lists/
+------------------------------------------------------------
+📜 Description:
+Given an array of k linked lists, each sorted in ascending order,
+merge all the lists into one sorted linked list and return it.
+
+💡 Example:
+Input: lists = [[1,4,5],[1,3,4],[2,6]]
+Output: [1,1,2,3,4,4,5,6]
+
+Input: lists = []
+Output: []
+
+🧩 Approach (Divide and Conquer):
+1. Pair lists two by two and merge them using mergeTwoLists.
+2. Repeat the process until only one merged list remains.
+3. mergeTwoLists merges two sorted linked lists iteratively.
+
+⏱️ Time Complexity:  O(N log k)  # N = total nodes, k = number of lists
+💾 Space Complexity: O(1)        # iterative merge, extra space negligible
+------------------------------------------------------------
+"""
 from typing import List, Optional
 
 
