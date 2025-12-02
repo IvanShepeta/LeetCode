@@ -3,3 +3,4 @@
 generate_readme.py
 .github/
 __pycache__
+main.py
