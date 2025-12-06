@@ -30,18 +30,21 @@ While expanding, count valid palindromes.
 class Solution:
     def countSubstrings(self, s: str) -> int:
         res = 0
-        def count(left, right):
-            nonlocal res
-            while left >=0 and right < len(s) and s[left] == s[right]:
-                res += 1
-                left -= 1
-                right += 1
 
         for i in range(len(s)):
-            count(i, i)
-            count(i, i + 1)
+            res += self.count(i, i, s)
+            res += self.count(i, i + 1, s)
 
         return res
+
+    def count(self, left, right, s):
+        res = 0
+        while left >=0 and right < len(s) and s[left] == s[right]:
+            res += 1
+            left -= 1
+            right += 1
+        return res
+
 
 s = Solution()
 
